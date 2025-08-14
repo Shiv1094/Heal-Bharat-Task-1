@@ -1,0 +1,106 @@
+body {
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hero without image - gradient */
+.hero-parallax {
+  background: linear-gradient(90deg, #0d6efd, #86b7fe);
+  min-height: 60vh;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+}
+body.dark-theme .hero-parallax {
+  background: linear-gradient(90deg, #22252a, #252d3a);
+}
+
+/* Counter Styling */
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0d6efd;
+  transition: color 0.3s;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Animated Card Hover */
+.animated-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.animated-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.18), 0 1.5px 5px rgba(0,0,0,0.10);
+}
+
+/* Attractive Button Effects */
+.btn, button {
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+.btn:hover, button:hover, .btn:focus, button:focus {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  color: #fff;
+  outline: none;
+}
+
+/* Animated Icons */
+.animated-icon {
+  transition: transform 0.7s;
+}
+.animated-card:hover .animated-icon {
+  transform: scale(1.17) rotate(-10deg);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.9s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Accessibility focus */
+input:focus, button:focus, .btn:focus, a:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 3px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #181b20;
+  color: #e0e0e0;
+}
+body.dark-theme .bg-light,
+body.dark-theme .accordion-item,
+body.dark-theme .card {
+  background-color: #23262c !important;
+  color: #e0e0e0 !important;
+}
+body.dark-theme .navbar {
+  background-color: #22252a !important;
+  color: #fff !important;
+}
+body.dark-theme .counter {
+  color: #6ea8fe !important;
+}
+body.dark-theme .btn-primary {
+  background-color: #0350bb !important;
+}
+body.dark-theme .btn-light {
+  background-color: #f5f6fa !important;
+  color: #23262c !important;
+}
